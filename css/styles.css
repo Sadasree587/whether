@@ -1,0 +1,6 @@
+body{font-family:system-ui;padding:2rem;background:#eef2ff;color:#0f172a}
+.center{max-width:420px;margin:0 auto;text-align:center}
+input{padding:.5rem;width:100%;margin:.5rem 0;border-radius:6px;border:1px solid #cbd5e1}
+button{padding:.5rem 1rem;border-radius:6px;border:0;background:#374151;color:white;cursor:pointer}
+.card{background:white;padding:1rem;border-radius:8px;margin-top:1rem;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.note{font-size:.85rem;color:#475569;margin-top:1rem}
