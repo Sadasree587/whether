@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mini Weather</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="center">
+    <h1>Mini Weather</h1>
+    <input id="city" placeholder="Enter city name" />
+    <button id="fetch">Get Weather</button>
+    <div id="result" class="card" hidden>
+      <h2 id="loc"></h2>
+      <p id="temp"></p>
+      <p id="desc"></p>
+    </div>
+    <p class="note">Tip: To use real API, add OpenWeatherMap key in js/app.js</p>
+  </main>
+<script src="js/app.js"></script>
+</body>
+</html>
