@@ -1,23 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mini Weather</title>
-<link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clime — Weather App</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main class="center">
-    <h1>Mini Weather</h1>
-    <input id="city" placeholder="Enter city name" />
-    <button id="fetch">Get Weather</button>
-    <div id="result" class="card" hidden>
-      <h2 id="loc"></h2>
-      <p id="temp"></p>
-      <p id="desc"></p>
-    </div>
-    <p class="note">Tip: To use real API, add OpenWeatherMap key in js/app.js</p>
-  </main>
-<script src="js/app.js"></script>
+  <div class="app">
+    <header class="header">
+      <h1 class="brand">Clime</h1>
+      <div class="controls">
+        <input id="searchInput" placeholder="Search city or ZIP" aria-label="Search city" />
+        <button id="searchBtn">Search</button>
+        <button id="locBtn" title="Use my location">📍</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Animated background canvas holder -->
+      <div id="bg" class="bg"></div>
+
+      <section class="card" id="weatherCard" aria-live="polite">
+        <div class="meta">
+          <h2 id="city">—</h2>
+          <p id="time">—</p>
+        </div>
+
+        <div class="now">
+          <img id="icon" alt="" />
+          <div class="temps">
+            <div class="temp" id="temp">—°C</div>
+            <div class="desc" id="desc">—</div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div>Feels: <span id="feels">—°C</span></div>
+          <div>Humidity: <span id="humidity">—%</span></div>
+          <div>Wind: <span id="wind">— m/s</span></div>
+        </div>
+
+        <div class="extras" id="forecast"></div>
+
+        <div class="history">
+          <h3>Search history</h3>
+          <div id="historyList"></div>
+          <button id="clearHistory" class="muted">Clear</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Data from OpenWeatherMap • Demo UI</small>
+    </footer>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
